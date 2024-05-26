@@ -94,6 +94,22 @@ button:focus-visible {
 .buttons-block
 {
   margin: auto;
-  width: 20%;
+  width: 100%;
   display: block;
+}
+
+.buttons-block > button
+{
+  background-color: #141414;
+
+}
+
+.buttons-block > button:hover
+{
+  background-color: #242424;
+}
+
+#PersonalImg 
+{
+  width: 100%;
 }
