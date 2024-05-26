@@ -93,6 +93,13 @@ input:focus-visible {
   margin-bottom: 10px;
 }
 
+#SkillsParagraphs
+{
+  font-size: 15pt;
+  margin-top: 5%;
+  margin-bottom: 5%;
+}
+
 .buttons-block
 {
   margin: auto;
@@ -116,6 +123,11 @@ input:focus-visible {
   width: 100%;
 }
 
+img
+{
+  object-fit: contain;
+}
+
 h2
 {
   margin: 0%;
@@ -128,5 +140,17 @@ h2
   width: 10%;
 
   column-gap: 30%;
-  object-fit:fill;
+  object-fit: fill;
+}
+
+ul {
+  display: flex;
+  flex-wrap: wrap;
+
+
+}
+
+ul li {
+  margin-right: 10%;
+  flex: 1 1 auto;
 }
