@@ -33,7 +33,8 @@ export function SkillsClick(infoDiv : any)
         <li>Git</li>
         <li>Slack</li>
         <li>Trello</li>
-
+    </ul>
+    <ul>
         <li>Angular</li>
         <li>PixiJS</li>
         <li>Three.js</li>
@@ -45,7 +46,8 @@ export function SkillsClick(infoDiv : any)
         <li>Linux</li>
         <li>RedHat</li>
         <li>Vim</li>
-
+    </ul>
+    <ul>
         <li>GameMaker Studio 2</li>
         <li>Unity</li>
         <li>Unreal Engine 5</li>
