@@ -89,6 +89,8 @@ input:focus-visible {
 #ReadableSize
 {
   font-size: 18pt;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 .buttons-block
@@ -109,7 +111,22 @@ input:focus-visible {
   background-color: #242424;
 }
 
-#PersonalImg 
+#ResizeableImage
 {
   width: 100%;
+}
+
+h2
+{
+  margin: 0%;
+}
+
+.LanguageIcons
+{
+  display: flex;
+  align-items: row;
+  width: 10%;
+
+  column-gap: 30%;
+  object-fit:fill;
 }
