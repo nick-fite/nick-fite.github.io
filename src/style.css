@@ -13,22 +13,22 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-body {
-  /*margin: 0;
+/*body {
+  margin: 0;
   display: flex;
   min-width: 320px;
-  min-height: 100vh;*/
-}
+  min-height: 100vh;
+}*/
 
 h1 {
   font-size: 3.2em;
   line-height: 1.1;
 }
 
-#app {
-  /*max-width: 1280px;
-  text-align: center;*/
-}
+/*#app {
+  max-width: 1280px;
+  text-align: center;
+}*/
 
 input {
   border-radius: 8px;
