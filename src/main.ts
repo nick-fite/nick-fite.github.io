@@ -12,15 +12,17 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
         <div class="buttons-block" style="  padding-bottom: 5%;">
           <input type="button" value="About Me" style="width: 100%;" id="AboutMeButton"></input>
           <input type="button" value="Skills" style="width: 100%;" id="SkillsButton"></input>
-          <input type="button" value="Experience" style="width: 100%; " id="ExperienceButton"></input>
+          <input type="button" value="Experience" style="width: 100%;" id="ExperienceButton"></input>
         </div>
       </div>
-      <div id="Information">
-        <p id="ReadableSize">I'm a programmer and a game designer who's looking for the next step in his career</p>
+      <div id="Information" style="width: 100%; height: 100%; padding-left:5%;"> 
+        <p id="ReadableSize" >I'm a programmer and a game designer who's looking for the next step in his career</p>
       </div>
     </div>
   </div>
+  <h1>Personal Projects</h1>
 `
+// I could (and probably should) move the css in the html to the .css, but this is for simple things. feels unnecessary.
 
 let infoDiv = document.getElementById("Information"); 
 
