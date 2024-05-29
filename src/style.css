@@ -157,3 +157,19 @@ ul li {
   margin-right: 10%;
   flex: 1 1 auto;
 }
+
+@media only screen and (max-width: 850px)
+{
+  .flex-container2
+  {
+    flex-direction: column;
+  }
+  .flex-container2 > div
+  {
+    align-items: center;
+  }
+  .LanguageIcons
+  {
+    align-self: center;
+  }
+}
