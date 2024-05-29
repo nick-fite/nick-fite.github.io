@@ -12,15 +12,15 @@ export function SkillsClick(infoDiv : any)
 {
     infoDiv!.innerHTML = `
     <div class="LanguageIcons">
-        <img src = "${BASE_URL}C_logo.png" alt ="C Logo" id="ResizeableImage">
-        <img src = "${BASE_URL}C++_logo.png" alt ="C++ Logo" id="ResizeableImage">
-        <img src = "${BASE_URL}C-Sharp_logo.png" alt ="C# Logo" id="ResizeableImage">
-        <img src = "${BASE_URL}Java_Logo.png" alt ="Java Logo" id="ResizeableImage">
-        <img src = "${BASE_URL}Python_logo.png" alt ="Python Logo" id="ResizeableImage">
-        <img src = "${BASE_URL}JavaScript_logo.png" alt ="Javascript Logo" id="ResizeableImage">
-        <img src = "${BASE_URL}Typescript_logo.png" alt ="Typescript Logo" id="ResizeableImage">
-        <img src = "${BASE_URL}html5_logo.png" alt ="HTML5 Logo" id="ResizeableImage">
-        <img src = "${BASE_URL}CSS_logo.png" alt ="CSS Logo" id="ResizeableImage">
+        <img src="${BASE_URL}C_logo.png" alt="C Logo" id="ResizeableImage"/>
+        <img src="${BASE_URL}C++_logo.png" alt="C++ Logo" id="ResizeableImage"/>
+        <img src="${BASE_URL}C-Sharp_logo.png" alt="C# Logo" id="ResizeableImage"/>
+        <img src="${BASE_URL}Java_Logo.png" alt="Java Logo" id="ResizeableImage"/>
+        <img src="${BASE_URL}Python_logo.png" alt="Python Logo" id="ResizeableImage"/>
+        <img src="${BASE_URL}JavaScript_logo.png" alt="Javascript Logo" id="ResizeableImage"/>
+        <img src="${BASE_URL}Typescript_logo.png" alt="Typescript Logo" id="ResizeableImage"/>
+        <img src="${BASE_URL}html5_logo.png" alt="HTML5 Logo" id="ResizeableImage"/>
+        <img src="${BASE_URL}CSS_logo.png" alt="CSS Logo" id="ResizeableImage"/>
     </div>
     <p id="SkillsParagraphs">I built my first computer at 12 and started programming at 13. I have always 
     enjoyed learning as much as I can about computers, and gaining all the new skills that I can. Currently I

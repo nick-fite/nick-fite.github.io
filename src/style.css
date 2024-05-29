@@ -126,6 +126,8 @@ input:focus-visible {
 
 img
 {
+  max-width: 100%;
+  min-width: 100%;
   object-fit: contain;
 }
 
@@ -137,7 +139,7 @@ h2
 .LanguageIcons
 {
   display: flex;
-  align-items: row;
+
   width: 10%;
 
   column-gap: 30%;
