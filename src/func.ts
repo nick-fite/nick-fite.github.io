@@ -61,9 +61,41 @@ export function SkillsClick(infoDiv : any)
 export function ExperienceClick(infoDiv : any)
 {
     infoDiv!.innerHTML = `
-    <h2>LightForce Orthodontics</h2>
-    <small>date-date<small>
-    <p id="ReadableSize">I worked with a team and learned about software engineering</p>
+    <div class="ExperienceSection">
+        <div class="ExperienceTitle">
+            <h2>LightForce Orthodontics</h2>
+            <img src="${BASE_URL}LightForce_logo.png" alt="LightForce Logo" id="ResizeableImage"/>
+        </div>
+        <small>December 2022 - May 2023<small>
+        <p id="ExperienceParagraph">Helped Develop web-based 3D modeling software for orthodontists using 
+        JavaScript, TypeScript, Angular, Three.js, Postgresql, and Git. It enables precise placement 
+        of braces through teeth scans and 3D-printed guides. I worked with and learned from a team of
+        professionals</p>
+    </div>
+
+    <div class="ExperienceSection">
+        <div class="ExperienceTitle">
+            <h2>Best Buy</h2>
+            <img src="${BASE_URL}BestBuy_logo.png" alt="BestBuy Logo" id="ResizeableImage"/>
+        </div>
+        <small>August 2022 - current<small>
+        <p id="ExperienceParagraph">Applied deep knowledge of Windows/Mac systems to excel in product 
+        recommendations, consistently ranking as a top earner in my store. Drew from my own experiences 
+        and language abilities to help customers differentiate products.</p>
+    </div>
+
+    <div class="ExperienceSection">
+        <div class="ExperienceTitle">
+            <h2>Code Ninja</h2>
+            <img src="${BASE_URL}CodeNinjas_logo.png" alt="BestBuy Logo" id="ResizeableImage"/>
+        </div>
+        <small>May 2019 - May 2020<small>
+        <p id="ExperienceParagraph">Interacted with kids in order to teach them some of the basics of 
+        code using Scratch and Javascript, leading many of these children to become more interested in 
+        computer science. Envisioned and administered events within a team, mainly Minecraft focused camps, 
+        bringing adolescents into our program.
+        </p>
+    </div>
     `
     return "test";
 }
