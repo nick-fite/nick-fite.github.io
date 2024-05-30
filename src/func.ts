@@ -61,7 +61,9 @@ export function SkillsClick(infoDiv : any)
 export function ExperienceClick(infoDiv : any)
 {
     infoDiv!.innerHTML = `
-    <p id="ReadableSize">Experience Test</p>
+    <h2>LightForce Orthodontics</h2>
+    <small>date-date<small>
+    <p id="ReadableSize">I worked with a team and learned about software engineering</p>
     `
     return "test";
 }
