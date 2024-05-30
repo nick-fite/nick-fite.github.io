@@ -156,28 +156,11 @@ ul li {
   flex: 1 1 auto;
 }
 
-.ExperienceTitle
-{
-  display: flex;
-  flex-direction: row;
-  width: 10%;
-  column-gap: 50%;
-}
-
-.ExperienceTitle > img
-{
-  width: 30px;
-}
-
 #ExperienceParagraph
 {
   font-size: 12pt;
 }
 
-.ExperienceSection
-{
-  padding-bottom: 5%;
-}
 
 @media only screen and (max-width: 850px)
 {
