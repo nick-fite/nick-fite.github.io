@@ -22,7 +22,13 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
       </div>
     </div>
   </div>
-  <h1>Personal Projects</h1>
+  <div class="PersonalProjects">
+    <h1>Personal Projects</h1>  
+    <div id="PersonalProject">
+      <h2>Stealth Game</h2>
+      <p>it's a stealth game made in unity</p>
+    </div>
+  </div>
 `
 // I could (and probably should) move the css in the html to the .css, but this is for simple things. feels unnecessary.
 
