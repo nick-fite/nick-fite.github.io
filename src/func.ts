@@ -3,7 +3,8 @@ const { BASE_URL } = import.meta.env;
 export function AboutMeClick(infoDiv : any)
 {
     infoDiv!.innerHTML = `
-    <p id="ReadableSize">I'm a programmer and a game designer who's looking for the next step in his career</p>
+    <p id="ReadableSize">I'm a programmer, game designer, and student based out of San Antonio, TX. I'm looking
+    for the next step in my career.</p>
     `
     return "test";
 }
@@ -82,6 +83,25 @@ export function ExperienceClick(infoDiv : any)
     code using Scratch and Javascript, leading many of these children to become more interested in 
     computer science. Envisioned and administered events within a team, mainly Minecraft focused camps, 
     bringing adolescents into our program.
+    </p>
+    `
+    return "test";
+}
+
+export function EducationClick(infoDiv : any)
+{
+    infoDiv!.innerHTML = `
+    <h2>University of the Incarnate Word</h2>
+    <small>2023 - 2026</small>
+    <p id="ExperienceParagraph">Majoring in 3D Animation and Game Design, taking classes that teach
+    C/C++, C#, Python, along with major game engines (Unity and Unreal Engine) and Maya.
+    </p>
+
+    <h2>Rochester Institute of Technology</h2>
+    <small>2020 - 2023</small>
+    <p id="ExperienceParagraph">Majored in Game Design and Development and completed 2 years of coursework.
+    Learned C/C++, C#, Javascript, HTML, CSS, and other programming languages. While I enjoyed my time at 
+    RIT, it was unfortunately cut short dueto unforseen circumstances.
     </p>
     `
     return "test";

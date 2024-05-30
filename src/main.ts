@@ -1,5 +1,5 @@
 import './style.css';
-import { AboutMeClick, ExperienceClick, SkillsClick} from './func';
+import { AboutMeClick, EducationClick, ExperienceClick, SkillsClick} from './func';
 const { BASE_URL } = import.meta.env;
 
 document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
@@ -13,10 +13,12 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
           <input type="button" value="About Me" style="width: 100%;" id="AboutMeButton"></input>
           <input type="button" value="Skills" style="width: 100%;" id="SkillsButton"></input>
           <input type="button" value="Experience" style="width: 100%;" id="ExperienceButton"></input>
+          <input type="button" value="Education" style="width: 100%;" id="EducationButton"></input>
         </div>
       </div>
       <div id="Information" style="width: 100%; height: 100%; padding-left:5%;"> 
-        <p id="ReadableSize" >I'm a programmer and a game designer who's looking for the next step in his career</p>
+        <p id="ReadableSize" >I'm a programmer, game designer, and student based out of San Antonio, TX. I'm looking
+        for the next step in my career.</p>
       </div>
     </div>
   </div>
@@ -34,3 +36,6 @@ SkillsBtn?.addEventListener("click", () => SkillsClick(infoDiv));
 
 let ExperienceBtn = document.getElementById("ExperienceButton");
 ExperienceBtn?.addEventListener("click", () => ExperienceClick(infoDiv));
+
+let EducationBtn = document.getElementById("EducationButton");
+EducationBtn?.addEventListener("click", () => EducationClick(infoDiv));
