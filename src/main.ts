@@ -25,8 +25,23 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
   <div class="PersonalProjects">
     <h1>Personal Projects</h1>  
     <div id="PersonalProject">
+      <h2>Multiplayer Shooter</h2>
+      <p>A simple third person shooter made in Unreal Engine 5.</p>
+    </div>
+    <div id="PersonalProject">
+      <h2>Group Fighting</h2>
+      <p>A simple game mechanic that has a group of people fighting the player made in Unreal engine 5.
+      Each enemy has to take turns hitting the player, and doesn't let them all attack at the same time.</p>
+    </div>
+    <div id="PersonalProject">
       <h2>Stealth Game</h2>
-      <p>it's a stealth game made in unity</p>
+      <p>A third person stealth game made in unity. The player can change colors to blend into walls.</p>
+      <img src="${BASE_URL}unnamed.png" alt="Stealth Game Image" id="ResizeableImage"/>
+    </div>
+    <div id="PersonalProject">
+      <h2>Gun Wizard</h2>
+      <p>A top down shooter made in collaberation with others in MonoGame. Additionally made a level editor in 
+      visual studio forms.</p>
     </div>
   </div>
 `
