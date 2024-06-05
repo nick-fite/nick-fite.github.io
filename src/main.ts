@@ -8,7 +8,7 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
     <div class="flex-container2">
       <div>
         <h1> Nicholas Fite</h1>
-        <img src = "${BASE_URL}higherResolution_headshot.jpg" alt ="Image of me" id="ResizeableImage" style = "border-radius: 100px;">
+        <img src = "${BASE_URL}higherResolution_headshot.jpg" alt ="Image of me" id="ResizeableImage" style = "border-radius: 100px; border: 3px solid white;">
         <div class="buttons-block" style="  padding-bottom: 5%;">
           <input type="button" value="About Me" style="width: 100%;" id="AboutMeButton"></input>
           <input type="button" value="Skills" style="width: 100%;" id="SkillsButton"></input>
