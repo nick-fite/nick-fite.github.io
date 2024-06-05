@@ -23,10 +23,10 @@ export function SkillsClick(infoDiv : any)
         <img src="${BASE_URL}html5_logo.png" alt="HTML5 Logo" id="ResizeableImage"/>
         <img src="${BASE_URL}CSS_logo.png" alt="CSS Logo" id="ResizeableImage"/>
     </div>
-    <p id="SkillsParagraphs">I built my first computer at 12 and started programming at 13. I have always 
-    enjoyed learning as much as I can about computers, and gaining all the new skills that I can. Currently I
-    am learning as much as I can about the process of making video games, from the inner workings of 
-    game engines to using popular game engines.</p>
+    <p id="SkillsParagraphs">I have always enjoyed learning as much as I can about computers, and gaining 
+    all the new skills that I can. Currently I am learning as much as I can about the process of making video 
+    games, from the inner workings of game engines to using popular game engines. I have also been exploring Linux,
+    both for personal use and for server use.</p>
     <h2>Tools/Plugins</h2>
     <p id="SkillsParagraphs">I have used a number of API's and tools, and am confident I can learn anything 
     new that I need to.</p>
@@ -101,7 +101,7 @@ export function EducationClick(infoDiv : any)
     <small>2020 - 2023</small>
     <p id="ExperienceParagraph">Majored in Game Design and Development and completed 2 years of coursework.
     Learned C/C++, C#, Javascript, HTML, CSS, and other programming languages. While I enjoyed my time at 
-    RIT, it was unfortunately cut short dueto unforseen circumstances.
+    RIT, it was unfortunately cut short due to unforeseen circumstances.
     </p>
     `
     return "test";
