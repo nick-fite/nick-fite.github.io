@@ -16,7 +16,7 @@ export function SkillsClick(infoDiv : any)
         <img src="${BASE_URL}C_logo.png" alt="C Logo" id="ResizeableImage"/>
         <img src="${BASE_URL}C++_logo.png" alt="C++ Logo" id="ResizeableImage"/>
         <img src="${BASE_URL}C-Sharp_logo.png" alt="C# Logo" id="ResizeableImage"/>
-        <img src="${BASE_URL}Java_logo.png" alt="Java Logo" id="ResizeableImage"/>
+        <img src="${BASE_URL}Java_Logo.png" alt="Java Logo" id="ResizeableImage"/>
         <img src="${BASE_URL}Python_logo.png" alt="Python Logo" id="ResizeableImage"/>
         <img src="${BASE_URL}JavaScript_logo.png" alt="Javascript Logo" id="ResizeableImage"/>
         <img src="${BASE_URL}Typescript_logo.png" alt="Typescript Logo" id="ResizeableImage"/>
