@@ -184,7 +184,7 @@ ul li {
   min-width: 50%;
   /*padding-left: 1%;*/
   border-radius: 50px;
-  border: 3px solid #AAAAAA;
+  border: 3px solid white;
 }
 
 @media only screen and (max-width: 850px)
