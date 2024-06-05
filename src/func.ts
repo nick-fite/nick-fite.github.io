@@ -62,7 +62,10 @@ export function SkillsClick(infoDiv : any)
 export function ExperienceClick(infoDiv : any)
 {
     infoDiv!.innerHTML = `
-    <h2>LightForce Orthodontics</h2>
+    <div id="TitleLogo">
+        <h2>LightForce Orthodontics</h2>
+        <img src="${BASE_URL}LightForce_logo.png" alt="LightForce Orthodontics Logo" id="ResizeableImage"/>
+    </div>
     <small>December 2022 - May 2023</small>
     <p id="ExperienceParagraph">Developed web-based 3D modeling software for 
     orthodontists using JavaScript, TypeScript, Angular, Three.js, Postgresql, and Git. 
@@ -70,14 +73,20 @@ export function ExperienceClick(infoDiv : any)
     Worked with and learned from a team of experienced professionals.
     </p>
 
-    <h2>Best Buy</h2>
+    <div id="TitleLogo">
+        <h2>Best Buy</h2>
+        <img src="${BASE_URL}BestBuy_logo.png" alt="Best Buy Logo" id="ResizeableImage"/>
+    </div>
     <small> August 2022 - current </small>
     <p id="ExperienceParagraph">Applied deep knowledge of Windows/Mac systems to 
     excel in product recommendations, consistently ranking as a top earner in my store.
     Drew from my own experiences and language abilities to help customers differentiate products.
     </p>
 
-    <h2>Code Ninjas</h2>
+    <div id="TitleLogo">
+        <h2>Code Ninjas</h2>
+        <img src="${BASE_URL}CodeNinjas_logo.png" alt="Code Ninjas Logo" id="ResizeableImage"/>
+    </div>
     <small>May 2019 - May 2020</small>
     <p id="ExperienceParagraph">Interacted with kids in order to teach them some of the basics of 
     code using Scratch and Javascript, leading many of these children to become more interested in 
@@ -91,13 +100,19 @@ export function ExperienceClick(infoDiv : any)
 export function EducationClick(infoDiv : any)
 {
     infoDiv!.innerHTML = `
-    <h2>University of the Incarnate Word</h2>
+    <div id="TitleLogo">
+        <h2>University of the Incarnate Word</h2>
+        <img src="${BASE_URL}UIW_logo.png" alt="UIW Logo" id="ResizeableImage"/>
+    </div>
     <small>2023 - 2026</small>
     <p id="ExperienceParagraph">Majoring in 3D Animation and Game Design, taking classes that teach
     C/C++, C#, Python, along with major game engines (Unity and Unreal Engine) and Maya.
     </p>
 
-    <h2>Rochester Institute of Technology</h2>
+    <div id="TitleLogo">
+        <h2>Rochester Institute of Technology</h2>
+        <img src="${BASE_URL}RIT_logo.png" alt="RIT Logo" id="ResizeableImage"/>
+    </div>
     <small>2020 - 2023</small>
     <p id="ExperienceParagraph">Majored in Game Design and Development and completed 2 years of coursework.
     Learned C/C++, C#, Javascript, HTML, CSS, and other programming languages. While I enjoyed my time at 

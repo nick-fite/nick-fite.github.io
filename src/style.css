@@ -156,6 +156,19 @@ ul li {
   flex: 1 1 auto;
 }
 
+#TitleLogo
+{
+  display: flex;
+  flex-direction: row;
+}
+
+#TitleLogo > img
+{
+  min-width: 0%;
+  width: 15%;
+  padding-left: 3%;
+}
+
 #ExperienceParagraph
 {
   font-size: 12pt;
@@ -163,7 +176,6 @@ ul li {
 
 .PersonalProjects
 {
-  
   padding-left: 20%;
   padding-right: 20%;
   padding-bottom: 20%;
