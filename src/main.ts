@@ -35,10 +35,9 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
     
     <h2>Group Fighting</h2>
     <div id="PersonalProject">
-      <p>A simple game mechanic that has a group of people fighting the player made in Unreal engine 5. Each enemy has to 
-      take turns hitting the player, and doesn't let them all attack at the same time. It additionally makes them fan out,
-      so they don't clump up in the same area. When enemy is hit enough they become stunned, and can be finished off by the
-      player.</p>
+      <p>A simple game mechanic that has a group of people fighting the player made in Unreal Engine 5. Each enemy has to take 
+      turns hitting the player, and doesn't let them all attack at the same time. It additionally makes them fan out, so they 
+      don't clump up in the same area. When the enemy is hit enough they become stunned, and can be finished off by the player.</p>
       <img src="${BASE_URL}groupFighting_screenshot.png" alt="Group Fighting Image" id="ResizeableImage"/>
     </div>
     
@@ -52,7 +51,7 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
 
     <h2>Stealth Game</h2>
     <div id="PersonalProject">
-      <p>A third person stealth game made in unity. AI will notice sounds, investiate areas they belive the player may be,
+      <p>A third person stealth game made in unity. AI will notice sounds, investigate areas they belive the player may be,
       alert others if they run into the player and then bring all the enemies to the area they saw the player last. The player
       is given the ability to change their color, if their color matches the color of the wall behind them the enemy has to
       be closer to notice them.</p>
