@@ -51,7 +51,7 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
 
     <h2>Stealth Game</h2>
     <div id="PersonalProject">
-      <p>A third person stealth game made in unity. AI will notice sounds, investigate areas they belive the player may be,
+      <p>A third person stealth game made in unity. AI will notice sounds, investigate areas they believe the player may be,
       alert others if they run into the player and then bring all the enemies to the area they saw the player last. The player
       is given the ability to change their color, if their color matches the color of the wall behind them the enemy has to
       be closer to notice them.</p>
