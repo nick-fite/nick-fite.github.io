@@ -18,7 +18,12 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
       </div>
       <div id="Information" style="width: 100%; height: 100%; padding-left:5%;"> 
         <p id="ReadableSize" >I'm a programmer, game designer, and student based out of San Antonio, TX. I'm looking
-        for the next step in my career.</p>
+        for the next step in my career.
+        <div style="display: flex; flex-direction: column;">
+          <a href="https://www.linkedin.com/in/nicholas-fite5">LinkedIn</a>
+          <a href="https://github.com/nick-fite">GitHub</a>
+          <a href="mailto:nicholasfite10@gmail.com">nicholasfite10@gmail.com</a>
+        </div>
       </div>
     </div>
   </div>

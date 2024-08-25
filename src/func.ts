@@ -5,6 +5,11 @@ export function AboutMeClick(infoDiv : any)
     infoDiv!.innerHTML = `
     <p id="ReadableSize">I'm a programmer, game designer, and student based out of San Antonio, TX. I'm looking
     for the next step in my career.</p>
+            <div style="display: flex; flex-direction: column;">
+          <a href="https://www.linkedin.com/in/nicholas-fite5">LinkedIn</a>
+          <a href="https://github.com/nick-fite">GitHub</a>
+          <a href="mailto:nicholasfite10@gmail.com">nicholasfite10@gmail.com</a>
+        </div>
     `
     return "test";
 }
