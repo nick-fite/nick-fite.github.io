@@ -87,6 +87,10 @@ input:focus-visible {
   text-align:left;
 }
 
+.InvertColor {
+  filter: contrast(0%);
+}
+
 #ReadableSize
 {
   font-size: 18pt;
@@ -138,12 +142,13 @@ h2
 
 .LanguageIcons
 {
-  display: flex;
-
   width: 10%;
-
-  column-gap: 30%;
-  object-fit: fill;
+  display: grid;
+  column-gap: 10px;
+  row-gap: 10px;
+  grid-template-columns: 100% 100% 100% 100% 100% 100%;
+  grid-template-rows: 50% 50%;
+  size: 10%;
 }
 
 ul {
@@ -160,13 +165,15 @@ ul li {
 {
   display: flex;
   flex-direction: row;
+  align-content: center;
+  align-items: center;
 }
 
 #TitleLogo > img
 {
   min-width: 0%;
   width: 15%;
-  padding-left: 3%;
+  padding-left: 5%;
 }
 
 #ExperienceParagraph

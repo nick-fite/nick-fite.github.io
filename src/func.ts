@@ -18,15 +18,17 @@ export function SkillsClick(infoDiv : any)
 {
     infoDiv!.innerHTML = `
     <div class="LanguageIcons">
+        <img src="${BASE_URL}JavaScript_logo.png" alt="Javascript Logo" id="ResizeableImage"/>
+        <img src="${BASE_URL}Typescript_logo.png" alt="Typescript Logo" id="ResizeableImage"/>
+        <img src="${BASE_URL}html5_logo.png" alt="HTML5 Logo" id="ResizeableImage"/>
+        <img src="${BASE_URL}CSS_logo.png" alt="CSS Logo" id="ResizeableImage"/>
+        <img src="${BASE_URL}next-js.svg" alt="NextJS Logo" class="InvertColor" id="ResizeableImage"/>
+        <img src="${BASE_URL}React-icon.png" alt="React Logo" id="ResizeableImage"/>
         <img src="${BASE_URL}C_logo.png" alt="C Logo" id="ResizeableImage"/>
         <img src="${BASE_URL}C++_logo.png" alt="C++ Logo" id="ResizeableImage"/>
         <img src="${BASE_URL}C-Sharp_logo.png" alt="C# Logo" id="ResizeableImage"/>
         <img src="${BASE_URL}Java_Logo.png" alt="Java Logo" id="ResizeableImage"/>
         <img src="${BASE_URL}Python_logo.png" alt="Python Logo" id="ResizeableImage"/>
-        <img src="${BASE_URL}JavaScript_logo.png" alt="Javascript Logo" id="ResizeableImage"/>
-        <img src="${BASE_URL}Typescript_logo.png" alt="Typescript Logo" id="ResizeableImage"/>
-        <img src="${BASE_URL}html5_logo.png" alt="HTML5 Logo" id="ResizeableImage"/>
-        <img src="${BASE_URL}CSS_logo.png" alt="CSS Logo" id="ResizeableImage"/>
     </div>
     <p id="SkillsParagraphs">I have always enjoyed learning as much as I can about computers, and gaining 
     all the new skills that I can. Currently I am learning as much as I can about the process of making video 
@@ -67,6 +69,25 @@ export function SkillsClick(infoDiv : any)
 export function ExperienceClick(infoDiv : any)
 {
     infoDiv!.innerHTML = `
+    
+    <div id="TitleLogo">
+    <h2>Valens Games</h2>
+    <img src="${BASE_URL}Valens_logo.png" alt="Code Ninjas Logo" class="InvertColor" id="ResizeableImage"/>
+    </div>
+    <small>November 2024 - January 2025</small>
+    <p id="ExperienceParagraph">
+    Frontend Engineer creating user-focused features and integrating APIs with PostgreSQL through React, Next.js, Chakra UI, and TypeScript.
+    </p>
+    <div id="TitleLogo">
+    <h2>Incarnate Word</h2>
+    <img src="${BASE_URL}UIW_logo.png" alt="Best Buy Logo" id="ResizeableImage"/>
+    </div>
+    <small> August 2022 - current </small>
+    <p id="ExperienceParagraph">Developing a React Native app for an art Installation, taking in 
+    and organizing photos, videos, and audio clips by tags.Helping guide the project to a more 
+    feasible direction, providing technical insight.
+    </p>
+    
     <div id="TitleLogo">
         <h2>LightForce Orthodontics</h2>
         <img src="${BASE_URL}LightForce_logo.png" alt="LightForce Orthodontics Logo" id="ResizeableImage"/>
@@ -76,27 +97,6 @@ export function ExperienceClick(infoDiv : any)
     orthodontists using JavaScript, TypeScript, Angular, Three.js, Postgresql, and Git. 
     It enables precise placement of braces through teeth scans and 3D-printed guides.
     Worked with and learned from a team of experienced professionals.
-    </p>
-
-    <div id="TitleLogo">
-        <h2>Best Buy</h2>
-        <img src="${BASE_URL}BestBuy_logo.png" alt="Best Buy Logo" id="ResizeableImage"/>
-    </div>
-    <small> August 2022 - current </small>
-    <p id="ExperienceParagraph">Applied deep knowledge of Windows/Mac systems to 
-    excel in product recommendations, consistently ranking as a top earner in my store.
-    Drew from my own experiences and language abilities to help customers differentiate products.
-    </p>
-
-    <div id="TitleLogo">
-        <h2>Code Ninjas</h2>
-        <img src="${BASE_URL}CodeNinjas_logo.png" alt="Code Ninjas Logo" id="ResizeableImage"/>
-    </div>
-    <small>May 2019 - May 2020</small>
-    <p id="ExperienceParagraph">Interacted with kids in order to teach them some of the basics of 
-    code using Scratch and Javascript, leading many of these children to become more interested in 
-    computer science. Envisioned and administered events within a team, mainly Minecraft focused camps, 
-    bringing adolescents into our program.
     </p>
     `
     return "test";
