@@ -49,6 +49,25 @@ input:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
 
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+button:hover {
+  border-color: #646cff;
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
 @media (prefers-color-scheme: light) {
   :root {
     color: #213547;
@@ -88,7 +107,15 @@ input:focus-visible {
 }
 
 .InvertColor {
-  filter: contrast(0%);
+  filter: invert(100%);
+}
+
+.UnityLogo {
+  filter: brightness(200%);
+}
+
+#LongLogo {
+ width: 120%; 
 }
 
 #ReadableSize
@@ -103,6 +130,13 @@ input:focus-visible {
   font-size: 15pt;
   margin-top: 5%;
   margin-bottom: 5%;
+}
+
+#ToolsParagraphs
+{
+  font-size: 15pt;
+  margin-top: 5%;
+  margin-bottom: 0%;
 }
 
 .buttons-block
@@ -151,6 +185,23 @@ h2
   size: 10%;
 }
 
+.LongIcons {
+  padding-top: 0%;
+  width: 10%;
+  display: grid;
+  column-gap: 10px;
+  row-gap: 10px;
+  grid-template-columns: 100% 100% 100% 100% 100% 200%;
+  grid-template-rows: 50% 50%;
+  size: 10%;
+  align-items: center;
+}
+
+#SmallLinkImage {
+  width: 50px;
+  height: 50px;
+}
+
 ul {
   display: flex;
   flex-wrap: wrap;
@@ -192,9 +243,19 @@ ul li {
   display: flex;
 }
 
-#PersonalProject > p
+#PersonalProject > div
 {
   padding-right: 3%;
+  width: 100%;
+}
+.ButtonIcon {
+  text-align: center;
+  display:flex;
+  flex-direction:row;
+  width: 100%;
+  vertical-align:top;
+  align-items: center;
+  justify-content: center;
 }
 
 #PersonalProject > img 
