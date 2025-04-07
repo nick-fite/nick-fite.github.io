@@ -34,6 +34,21 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
   <div class="PersonalProjects">
     <h1>Personal Projects</h1>
     
+    <h2>Shoplifting Boy</h2>  
+    <div id="PersonalProject">
+      <div>
+        <p>A remake of the obsure Commodore PET game <a href="https://jimgerrie.blogspot.com/2019/04/shoplifting-boy-first-stealth-game.html">Shoplifting Boy</a>
+        using raycasting in OpenGL and C++. Custom models and skeletal animations.</p>
+          <button class="ButtonIcon" id="ShopliftingBoyBtn">
+            <div style="width: 12%; height:12%; align-items: center;">
+              <img src="${BASE_URL}github.png" id=""/>
+            </div>
+            <p>GitHub</p>
+          </button>  
+      </div>
+      <img src="${BASE_URL}comingSoon.png" alt="Multiplayer Shooter Image" id="ResizeableImage"/>
+    </div>
+
     <h2>Raycasting Night Drive</h2>  
     <div id="PersonalProject">
       <div>
@@ -268,4 +283,9 @@ let NightDriveBtn = document.getElementById("NightDriveBtn");
 NightDriveBtn?.addEventListener("click", () => {
   window.open("https://github.com/nick-fite/NightDriveOpenGL","_blank");
 
+});
+
+let ShopliftingBoyBtn = document.getElementById("ShopliftingBoyBtn");
+ShopliftingBoyBtn?.addEventListener("click", () => {
+  window.open("https://github.com/nick-fite/ShopLiftOpenGL","_blank");
 });
