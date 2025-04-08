@@ -46,7 +46,7 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
             <p>GitHub</p>
           </button>  
       </div>
-      <img src="${BASE_URL}comingSoon.png" alt="Multiplayer Shooter Image" id="ResizeableImage"/>
+      <img src="${BASE_URL}comingSoon3.png"  alt="Multiplayer Shooter Image" id="ResizeableImage"/>
     </div>
 
     <h2>Raycasting Night Drive</h2>  

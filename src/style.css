@@ -241,6 +241,7 @@ ul li {
 #PersonalProject
 {
   display: flex;
+  margin-bottom: 5%;
 }
 
 #PersonalProject > div
