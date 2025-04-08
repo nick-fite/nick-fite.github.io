@@ -38,7 +38,7 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
     <div id="PersonalProject">
       <div>
         <p>A remake of the obsure Commodore PET game <a href="https://jimgerrie.blogspot.com/2019/04/shoplifting-boy-first-stealth-game.html">Shoplifting Boy</a>
-        using raycasting in OpenGL and C++. Custom models and skeletal animations.</p>
+        using OpenGL and C++. Custom models and skeletal animations.</p>
           <button class="ButtonIcon" id="ShopliftingBoyBtn">
             <div style="width: 12%; height:12%; align-items: center;">
               <img src="${BASE_URL}github.png" id=""/>
