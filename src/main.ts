@@ -95,7 +95,7 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
     <h2>Knightly Shove</h2>  
     <div id="PersonalProject">
       <div>
-        <p>A Unity LAN multiplayer game that allows you to pick up items, throw them at people and shove people into a pit.</p>
+        <p>A Unity LAN multiplayer game that allows you to pick up items, throw them at people and shove people into a pit. Made in a group with 2 other people with custom models and using P4V for version control.</p>
           <button class="ButtonIcon" id="KnightlyShoveBtn">
             <div style="width: 12%; height:12%; align-items: center;">
               <img src="${BASE_URL}github.png" id=""/>
