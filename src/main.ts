@@ -40,7 +40,7 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
         <p>Recreating objects with the marching cube style. Uses size distance fields to recreate object in blocky style, gives ability
         to increase resolution of objects. Uses sined distance fields to create the objets. Objects can be destroyed by making holes in it.
         </p>
-          <button class="ButtonIcon" id="NightDriveBtn">
+          <button class="ButtonIcon" id="BrokenBronzeBtn">
             <div style="width: 12%; height:12%; align-items: center;">
               <img src="${BASE_URL}github.png" id=""/>
             </div>
@@ -322,6 +322,12 @@ TerrainGenerationBtn?.addEventListener("click", () => {
 let NightDriveBtn = document.getElementById("NightDriveBtn");
 NightDriveBtn?.addEventListener("click", () => {
   window.open("https://github.com/nick-fite/NightDriveOpenGL","_blank");
+
+});
+
+let BrokenBronzeBtn = document.getElementById("BrokenBronzeBtn");
+BrokenBronzeBtn?.addEventListener("click", () => {
+  window.open("https://github.com/nick-fite/BrokenBronze","_blank");
 
 });
 
