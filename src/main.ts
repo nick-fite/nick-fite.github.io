@@ -34,19 +34,59 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
   <div class="PersonalProjects">
     <h1>Personal Projects</h1>
     
-    <h2>Shoplifting Boy</h2>  
+    <h2>Unreal Engine Marching Cubes</h2>  
     <div id="PersonalProject">
       <div>
-        <p>A remake of the obsure Commodore PET game <a href="https://jimgerrie.blogspot.com/2019/04/shoplifting-boy-first-stealth-game.html">Shoplifting Boy</a>
-        using OpenGL and C++. Custom models and skeletal animations.</p>
-          <button class="ButtonIcon" id="ShopliftingBoyBtn">
+        <p>Recreating objects with the marching cube style. Uses size distance fields to recreate object in blocky style, gives ability
+        to increase resolution of objects. Uses sined distance fields to create the objets. Objects can be destroyed by making holes in it.
+        </p>
+          <button class="ButtonIcon" id="NightDriveBtn">
             <div style="width: 12%; height:12%; align-items: center;">
               <img src="${BASE_URL}github.png" id=""/>
             </div>
             <p>GitHub</p>
           </button>  
       </div>
-      <img src="${BASE_URL}comingSoon3.png"  alt="Multiplayer Shooter Image" id="ResizeableImage"/>
+      <div style="
+  margin-left:5%;
+  width:70%;
+  display:flex;
+  justify-content:center;
+">
+  <div style="
+    position:relative;               /* needed for ::before */
+    display:inline-grid;             /* tighter box than flex */
+    grid-template-columns: repeat(2, 120px);
+    gap:24px;
+    padding:24px;
+    border-radius:16px;
+    background:#1a1a1a;              /* contrast with border */
+    isolation:isolate;               /* keep stacking sane */
+  ">
+    <!-- the border -->
+    <span style="
+      content:'';
+      position:absolute; inset:0;
+      border:3px solid #fff; border-radius:16px;
+      pointer-events:none;
+      z-index:1;
+      display:block;
+    "></span>
+
+    <!-- top row -->
+    <img src="${BASE_URL}MarchingCube/MarchingCubeLowRes.PNG"
+         alt="Low Res"  style="width:480px;height:auto;border-radius:8px;" />
+    <img src="${BASE_URL}MarchingCube/MarchingCubeHighRes.PNG"
+         alt="High Res" style="width:480px;height:auto;border-radius:8px;" />
+
+    <!-- bottom, centered under both -->
+    <img src="${BASE_URL}MarchingCube/MarchingCubeOriginal.PNG"
+         alt="Original" style="
+           width:140px;height:auto;border-radius:8px;
+           grid-column:1 / -1; justify-self:center;
+         " />
+  </div>
+</div>
     </div>
 
     <h2>Raycasting Night Drive</h2>  

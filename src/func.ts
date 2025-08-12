@@ -84,23 +84,24 @@ export function ExperienceClick(infoDiv : any)
     infoDiv!.innerHTML = `
     
     <div id="TitleLogo">
-    <h2>Valens Games</h2>
-    <img src="${BASE_URL}Valens_logo.png" alt="Code Ninjas Logo" class="InvertColor" id="ResizeableImage"/>
-    </div>
-    <small>November 2024 - current</small>
-    <p id="ExperienceParagraph">
-    Frontend Engineer creating user-focused features and integrating APIs with PostgreSQL through React, Next.js, Chakra UI, and TypeScript.
-    </p>
-    <div id="TitleLogo">
-    <h2>Incarnate Word</h2>
-    <img src="${BASE_URL}UIW_logo.png" alt="Best Buy Logo" id="ResizeableImage"/>
+    <h2>Theatre Nohgaku</h2>
+    <img src="${BASE_URL}TN_logo_roundel_25_no_white_clean.png" alt="Best Buy Logo" id="ResizeableImage"/>
     </div>
     <small> August 2022 - current </small>
-    <p id="ExperienceParagraph">Developing a React Native app for an art Installation, taking in 
+    <p id="ExperienceParagraph">Developing a React Native app with a firebase backend for an art Installation, taking in 
     and organizing photos, videos, and audio clips by tags.Helping guide the project to a more 
     feasible direction, providing technical insight.
     </p>
     
+    <div id="TitleLogo">
+    <h2>Valens Games</h2>
+    <img src="${BASE_URL}Valens_logo.png" alt="Code Ninjas Logo" class="InvertColor" id="ResizeableImage"/>
+    </div>
+    <small>November 2024 - May 2025</small>
+    <p id="ExperienceParagraph">
+    Frontend Engineer creating user-focused features and integrating APIs with PostgreSQL through React, Next.js, Chakra UI, and TypeScript.
+    </p>
+
     <div id="TitleLogo">
         <h2>LightForce Orthodontics</h2>
         <img src="${BASE_URL}LightForce_logo.png" alt="LightForce Orthodontics Logo" id="ResizeableImage"/>
