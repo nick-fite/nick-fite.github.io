@@ -38,7 +38,7 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
     <div id="PersonalProject">
       <div>
         <p>Recreating objects with the marching cube style. Uses size distance fields to recreate object in blocky style, gives ability
-        to increase resolution of objects. Uses sined distance fields to create the objets. Objects can be destroyed by making holes in it.
+        to increase resolution of objects. Uses signed distance fields to create the objets. Objects can be destroyed by making holes in it.
         </p>
           <button class="ButtonIcon" id="BrokenBronzeBtn">
             <div style="width: 12%; height:12%; align-items: center;">
