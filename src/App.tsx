@@ -64,6 +64,8 @@ function Box(props: ThreeElements['group']) {
       loaded.traverse((child) => {
         if (child instanceof THREE.Mesh) {
           child.material = shaderMaterial
+        
+          const geo = child.geometry;
         }
       })
       setObject(loaded)
