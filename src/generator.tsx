@@ -28,6 +28,8 @@ type marchingProps = {
     boundingX : number,
     boundingY : number,
     boundingZ : number,
+    meshCenter : Vector,
+    position: Vector,
 }
 
 type Size = {
@@ -47,7 +49,7 @@ type voxelWorldPosProps = {
     Z: number
 }
 
-export function MarchingCubeObject({verticies, triangles, normals, colors, UVs, indicies, boundingX, boundingY, boundingZ}: marchingProps) {
+export function MarchingCubeObject({verticies, triangles, normals, colors, UVs, indicies, boundingX, boundingY, boundingZ, meshCenter, position}: marchingProps) {
     const [originalVerts, setOriginalVerts] = useState<Vector[]>(verticies); 
     const [originalTriangles, setOriginalTriangles] = useState<number[]>(triangles); 
     const [originalNormals, setOriginalNormals] = useState<Vector[]>(normals); 
