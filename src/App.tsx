@@ -101,9 +101,14 @@ function SculptableSphere({ onHudChange }: SculptableSphereProps) {
   const sculptDirectionRef = useRef<1 | -1>(1)
   const transitioningRef = useRef(false)
   const transitionProgressRef = useRef(0)
-  const swapDoneRef = useRef(false)
   const targetControllerRef = useRef(false)
   const isControllerRef = useRef(false)
+  const morphStateRef = useRef<{
+    geometry: THREE.BufferGeometry
+    positionAttr: THREE.BufferAttribute
+    sourcePositions: Float32Array
+    targetPositions: Float32Array
+  } | null>(null)
 
   const spherePristineRef = useRef<THREE.BufferGeometry | null>(null)
   const controllerPristineRef = useRef<THREE.BufferGeometry | null>(null)
@@ -167,6 +172,41 @@ function SculptableSphere({ onHudChange }: SculptableSphereProps) {
 
     mesh.geometry = nextGeometry
     sculptDataRef.current = buildSculptData(nextGeometry)
+  }
+
+  const mapSourceToTargetPositions = (
+    sourceAttr: THREE.BufferAttribute,
+    targetAttr: THREE.BufferAttribute
+  ) => {
+    const mapped = new Float32Array(targetAttr.count * 3)
+
+    for (let targetIndex = 0; targetIndex < targetAttr.count; targetIndex += 1) {
+      const tx = targetAttr.getX(targetIndex)
+      const ty = targetAttr.getY(targetIndex)
+      const tz = targetAttr.getZ(targetIndex)
+
+      let closestSourceIndex = 0
+      let bestDistanceSq = Number.POSITIVE_INFINITY
+
+      for (let sourceIndex = 0; sourceIndex < sourceAttr.count; sourceIndex += 1) {
+        const dx = sourceAttr.getX(sourceIndex) - tx
+        const dy = sourceAttr.getY(sourceIndex) - ty
+        const dz = sourceAttr.getZ(sourceIndex) - tz
+        const distanceSq = dx * dx + dy * dy + dz * dz
+
+        if (distanceSq < bestDistanceSq) {
+          bestDistanceSq = distanceSq
+          closestSourceIndex = sourceIndex
+        }
+      }
+
+      const writeOffset = targetIndex * 3
+      mapped[writeOffset] = sourceAttr.getX(closestSourceIndex)
+      mapped[writeOffset + 1] = sourceAttr.getY(closestSourceIndex)
+      mapped[writeOffset + 2] = sourceAttr.getZ(closestSourceIndex)
+    }
+
+    return mapped
   }
 
   useEffect(() => {
@@ -254,9 +294,53 @@ function SculptableSphere({ onHudChange }: SculptableSphereProps) {
         return
       }
 
+      const mesh = meshRef.current
+      if (!mesh) {
+        return
+      }
+
       targetControllerRef.current = !isControllerRef.current
+      const targetPristine = targetControllerRef.current
+        ? controllerPristineRef.current
+        : spherePristineRef.current
+
+      if (!targetPristine) {
+        return
+      }
+
+      const sourceGeometry = mesh.geometry as THREE.BufferGeometry
+      const sourceAttr = sourceGeometry.attributes.position as THREE.BufferAttribute
+      const morphGeometry = targetPristine.clone()
+      const targetAttr = morphGeometry.attributes.position as THREE.BufferAttribute
+      const sourcePositions = mapSourceToTargetPositions(sourceAttr, targetAttr)
+      const targetPositions = new Float32Array(targetAttr.array as ArrayLike<number>)
+
+      for (let i = 0; i < targetAttr.count; i += 1) {
+        const readOffset = i * 3
+        targetAttr.setXYZ(
+          i,
+          sourcePositions[readOffset],
+          sourcePositions[readOffset + 1],
+          sourcePositions[readOffset + 2]
+        )
+      }
+
+      targetAttr.needsUpdate = true
+      morphGeometry.computeVertexNormals()
+      const morphNormals = morphGeometry.attributes.normal as THREE.BufferAttribute | undefined
+      if (morphNormals) {
+        morphNormals.needsUpdate = true
+      }
+
+      activateGeometry(morphGeometry)
+      morphStateRef.current = {
+        geometry: morphGeometry,
+        positionAttr: targetAttr,
+        sourcePositions,
+        targetPositions,
+      }
+
       transitionProgressRef.current = 0
-      swapDoneRef.current = false
       transitioningRef.current = true
       onHudChange(targetControllerRef.current ? 'Morphing to Controller' : 'Morphing to Sphere')
     }
@@ -378,28 +462,36 @@ function SculptableSphere({ onHudChange }: SculptableSphereProps) {
     }
 
     if (transitioningRef.current) {
-      transitionProgressRef.current = Math.min(transitionProgressRef.current + delta / 0.35, 1)
+      transitionProgressRef.current = Math.min(transitionProgressRef.current + delta / 0.45, 1)
       const material = mesh.material as THREE.MeshStandardMaterial
-      material.transparent = true
-      material.opacity = transitionProgressRef.current < 0.5
-        ? THREE.MathUtils.lerp(1, 0.12, transitionProgressRef.current * 2)
-        : THREE.MathUtils.lerp(0.12, 1, (transitionProgressRef.current - 0.5) * 2)
+      const morphState = morphStateRef.current
 
-      if (!swapDoneRef.current && transitionProgressRef.current >= 0.5) {
-        const targetGeometry = targetControllerRef.current
-          ? controllerPristineRef.current?.clone()
-          : spherePristineRef.current?.clone()
+      if (morphState) {
+        const t = transitionProgressRef.current
+        const easedT = t * t * (3 - 2 * t)
+        const positionArray = morphState.positionAttr.array as Float32Array
 
-        if (targetGeometry) {
-          activateGeometry(targetGeometry)
-          isControllerRef.current = targetControllerRef.current
+        for (let i = 0; i < positionArray.length; i += 1) {
+          positionArray[i] = THREE.MathUtils.lerp(
+            morphState.sourcePositions[i],
+            morphState.targetPositions[i],
+            easedT
+          )
         }
 
-        swapDoneRef.current = true
+        morphState.positionAttr.needsUpdate = true
+        morphState.geometry.computeVertexNormals()
+        const normals = morphState.geometry.attributes.normal as THREE.BufferAttribute | undefined
+        if (normals) {
+          normals.needsUpdate = true
+        }
       }
 
       if (transitionProgressRef.current >= 1) {
         transitioningRef.current = false
+        isControllerRef.current = targetControllerRef.current
+        sculptDataRef.current = buildSculptData(mesh.geometry as THREE.BufferGeometry)
+        morphStateRef.current = null
         material.opacity = 1
         material.transparent = false
         onHudChange(isControllerRef.current ? 'Controller' : 'Sphere')
@@ -506,14 +598,26 @@ function App() {
         <section className="info-block">
           <h2>How This Simulation Works</h2>
           <p>
-            The object starts as a sphere mesh. While you drag, the brush finds nearby vertices,
-            pushes or pulls them along local normals, and then smooths the edited region to reduce
-            harsh artifacts. This is what creates the sculpting feel.
+            While you drag, a ray is cast from the camera to the mesh. If it hits, the hit point is
+            converted to local space and used as the brush center.
           </p>
           <p>
-            Pressing 6 triggers a fast transition and swaps to the controller geometry loaded from
-            the OBJ file in the public folder. The sculpt system then rebuilds its neighbor data
-            for that active mesh, so editing continues seamlessly after switching forms.
+            The brush checks nearby vertices only. It applies a distance falloff and moves vertices
+            along their normals, so left drag pushes out and right drag pulls in.
+          </p>
+          <p>
+            After each stroke, a light smoothing pass averages touched vertices with their
+            neighbors. This removes spikes while keeping the shape readable.
+          </p>
+          <p>
+            On the sphere, deformation is clamped to a safe range based on each vertex&apos;s original
+            radius, which prevents extreme collapse or stretching.
+          </p>
+          <p>
+            Pressing 6 morphs between sphere and controller. The target mesh is prepared from the
+            OBJ, each target vertex is matched to a nearby source vertex, then positions interpolate
+            over time with easing. Normals and sculpt neighbor data are rebuilt so lighting and
+            brush behavior stay stable after the transition.
           </p>
         </section>
 
