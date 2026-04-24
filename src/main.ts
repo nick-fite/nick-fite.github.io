@@ -2,6 +2,7 @@ import './style.css';
 import { AboutMeClick, EducationClick, ExperienceClick, SkillsClick} from './func.ts';
 const { BASE_URL } = import.meta.env;
 
+
 document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
   
   <div class="flex-container">
